@@ -15,7 +15,7 @@ To install the application, follow these steps:
 2. Navigate to the project directory:
 
 ```bash
-    cd to-do-list
+    cd ./to-do-list
 ```
 3. Navigate to the project directory:
 
