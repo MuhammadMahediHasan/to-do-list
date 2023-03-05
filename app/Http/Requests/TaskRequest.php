@@ -20,4 +20,11 @@ class TaskRequest extends FormRequest
             'todo_id' => ['required'],
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'todo_id.required' => 'Todo field is required.'
+        ];
+    }
 }
