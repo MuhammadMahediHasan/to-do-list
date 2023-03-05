@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class TodoListRequest extends FormRequest
+class TaskRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -17,6 +17,7 @@ class TodoListRequest extends FormRequest
     {
         return [
             'name' => ['string', 'max:255'],
+            'todo_id' => ['required'],
         ];
     }
 }

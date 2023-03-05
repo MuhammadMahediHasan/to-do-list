@@ -10,7 +10,7 @@ use Illuminate\Support\Str;
 /**
  * @extends Factory<Todo>
  */
-class TodoFactory extends Factory
+class TaskFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -21,7 +21,8 @@ class TodoFactory extends Factory
     {
         return [
             'name' => fake()->name(),
-            'user_id' => User::query()->pluck('id')->random(),
+            'user_id' => Todo::query()->pluck('user_id')->random(),
+            'task_id' => Todo::query()->pluck('id')->random(),
         ];
     }
 }

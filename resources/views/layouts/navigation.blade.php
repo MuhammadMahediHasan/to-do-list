@@ -15,8 +15,11 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('todo.index')" :active="request()->routeIs('todo.index')">
-                        {{ __('To-do List') }}
+                    <x-nav-link :href="route('todo.index')" :active="request()->segment(1) == 'todo'">
+                        {{ __('To-do') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('task.index')" :active="request()->segment(1) == 'task'">
+                        {{ __('Task') }}
                     </x-nav-link>
                 </div>
             </div>
